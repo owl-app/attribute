@@ -25,11 +25,21 @@ final class SelectAttributeType implements AttributeTypeInterface
 {
     public const TYPE = 'select';
 
+    /**
+     * @return string
+     *
+     * @psalm-return 'json'
+     */
     public function getStorageType(): string
     {
         return AttributeValueInterface::STORAGE_JSON;
     }
 
+    /**
+     * @return string
+     *
+     * @psalm-return 'select'
+     */
     public function getType(): string
     {
         return self::TYPE;

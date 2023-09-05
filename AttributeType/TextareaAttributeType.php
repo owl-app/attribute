@@ -22,11 +22,21 @@ final class TextareaAttributeType implements AttributeTypeInterface
 {
     public const TYPE = 'textarea';
 
+    /**
+     * @return string
+     *
+     * @psalm-return 'text'
+     */
     public function getStorageType(): string
     {
         return AttributeValueInterface::STORAGE_TEXT;
     }
 
+    /**
+     * @return string
+     *
+     * @psalm-return 'textarea'
+     */
     public function getType(): string
     {
         return self::TYPE;

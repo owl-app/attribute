@@ -20,11 +20,21 @@ final class CheckboxAttributeType implements AttributeTypeInterface
 {
     public const TYPE = 'checkbox';
 
+    /**
+     * @return string
+     *
+     * @psalm-return 'boolean'
+     */
     public function getStorageType(): string
     {
         return AttributeValueInterface::STORAGE_BOOLEAN;
     }
 
+    /**
+     * @return string
+     *
+     * @psalm-return 'checkbox'
+     */
     public function getType(): string
     {
         return self::TYPE;

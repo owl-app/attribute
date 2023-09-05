@@ -23,11 +23,21 @@ final class TextAttributeType implements AttributeTypeInterface
 {
     public const TYPE = 'text';
 
+    /**
+     * @return string
+     *
+     * @psalm-return 'text'
+     */
     public function getStorageType(): string
     {
         return AttributeValueInterface::STORAGE_TEXT;
     }
 
+    /**
+     * @return string
+     *
+     * @psalm-return 'text'
+     */
     public function getType(): string
     {
         return self::TYPE;

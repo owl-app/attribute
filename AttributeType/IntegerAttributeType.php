@@ -22,11 +22,21 @@ final class IntegerAttributeType implements AttributeTypeInterface
 {
     public const TYPE = 'integer';
 
+    /**
+     * @return string
+     *
+     * @psalm-return 'integer'
+     */
     public function getStorageType(): string
     {
         return AttributeValueInterface::STORAGE_INTEGER;
     }
 
+    /**
+     * @return string
+     *
+     * @psalm-return 'integer'
+     */
     public function getType(): string
     {
         return self::TYPE;

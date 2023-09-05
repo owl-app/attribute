@@ -20,11 +20,21 @@ final class DatetimeAttributeType implements AttributeTypeInterface
 {
     public const TYPE = 'datetime';
 
+    /**
+     * @return string
+     *
+     * @psalm-return 'datetime'
+     */
     public function getStorageType(): string
     {
         return AttributeValueInterface::STORAGE_DATETIME;
     }
 
+    /**
+     * @return string
+     *
+     * @psalm-return 'datetime'
+     */
     public function getType(): string
     {
         return self::TYPE;

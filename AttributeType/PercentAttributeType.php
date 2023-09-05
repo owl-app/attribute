@@ -22,11 +22,21 @@ final class PercentAttributeType implements AttributeTypeInterface
 {
     public const TYPE = 'percent';
 
+    /**
+     * @return string
+     *
+     * @psalm-return 'float'
+     */
     public function getStorageType(): string
     {
         return AttributeValueInterface::STORAGE_FLOAT;
     }
 
+    /**
+     * @return string
+     *
+     * @psalm-return 'percent'
+     */
     public function getType(): string
     {
         return self::TYPE;

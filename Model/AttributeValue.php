@@ -199,6 +199,8 @@ class AttributeValue implements AttributeValueInterface
 
     /**
      * @throws \BadMethodCallException
+     *
+     * @return void
      */
     protected function assertAttributeIsSet()
     {

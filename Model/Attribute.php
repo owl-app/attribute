@@ -57,6 +57,9 @@ class Attribute implements AttributeInterface
         return $this->id;
     }
 
+    /**
+     * @return string
+     */
     public function getCode(): ?string
     {
         return $this->code;
@@ -67,6 +70,9 @@ class Attribute implements AttributeInterface
         $this->code = $code;
     }
 
+    /**
+     * @return string
+     */
     public function getType(): ?string
     {
         return $this->type;
@@ -87,6 +93,9 @@ class Attribute implements AttributeInterface
         $this->configuration = $configuration;
     }
 
+    /**
+     * @return string
+     */
     public function getStorageType(): ?string
     {
         return $this->storageType;

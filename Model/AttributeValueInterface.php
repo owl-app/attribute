@@ -45,8 +45,6 @@ interface AttributeValueInterface extends ResourceInterface
 
     public function getCode(): ?string;
 
-    public function getName(): ?string;
-
     public function getType(): ?string;
 
     /**

@@ -18,6 +18,11 @@ use Owl\Component\Attribute\Model\AttributeInterface;
 use Sylius\Component\Registry\ServiceRegistryInterface;
 use Sylius\Component\Resource\Factory\FactoryInterface;
 
+/**
+ * @template T of AttributeInterface
+ *
+ * @implements AttributeFactoryInterface<T>
+ */
 final class AttributeFactory implements AttributeFactoryInterface
 {
     /** @var FactoryInterface */

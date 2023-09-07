@@ -24,9 +24,6 @@ interface AttributeSubjectInterface
      */
     public function getAttributes(): Collection;
 
-    /**
-     * @psalm-return Collection<array-key, AttributeValueInterface>
-     */
     public function addAttribute(AttributeValueInterface $attribute): void;
 
     public function removeAttribute(AttributeValueInterface $attribute): void;

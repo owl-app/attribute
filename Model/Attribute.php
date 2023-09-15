@@ -15,8 +15,6 @@ namespace Owl\Component\Attribute\Model;
 
 use Owl\Component\Attribute\AttributeType\TextAttributeType;
 use Sylius\Component\Resource\Model\TimestampableTrait;
-use Sylius\Component\Resource\Model\TranslatableTrait;
-use Sylius\Component\Resource\Model\TranslationInterface;
 
 class Attribute implements AttributeInterface
 {
@@ -37,9 +35,7 @@ class Attribute implements AttributeInterface
     /** @var string */
     protected $storageType;
 
-    /**
-     * @var int|null
-     */
+    /** @var int|null */
     protected $position;
 
     public function __construct()

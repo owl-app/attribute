@@ -24,8 +24,6 @@ final class TextAttributeType implements AttributeTypeInterface
     public const TYPE = 'text';
 
     /**
-     * @return string
-     *
      * @psalm-return 'text'
      */
     public function getStorageType(): string
@@ -34,8 +32,6 @@ final class TextAttributeType implements AttributeTypeInterface
     }
 
     /**
-     * @return string
-     *
      * @psalm-return 'text'
      */
     public function getType(): string
@@ -46,7 +42,7 @@ final class TextAttributeType implements AttributeTypeInterface
     public function validate(
         AttributeValueInterface $attributeValue,
         ExecutionContextInterface $context,
-        array $configuration
+        array $configuration,
     ): void {
         if (!isset($configuration['required']) && (!isset($configuration['min']) || !isset($configuration['max']))) {
             return;
@@ -66,7 +62,7 @@ final class TextAttributeType implements AttributeTypeInterface
     private function getValidationErrors(
         ExecutionContextInterface $context,
         ?string $value,
-        array $validationConfiguration
+        array $validationConfiguration,
     ): ConstraintViolationListInterface {
         $validator = $context->getValidator();
         $constraints = [];
@@ -80,13 +76,13 @@ final class TextAttributeType implements AttributeTypeInterface
                 [
                     'min' => $validationConfiguration['min'],
                     'max' => $validationConfiguration['max'],
-                ]
+                ],
             );
         }
 
         return $validator->validate(
             $value,
-            $constraints
+            $constraints,
         );
     }
 }

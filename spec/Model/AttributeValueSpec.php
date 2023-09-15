@@ -13,11 +13,11 @@ declare(strict_types=1);
 
 namespace spec\Owl\Component\Attribute\Model;
 
-use PhpSpec\ObjectBehavior;
 use Owl\Component\Attribute\Model\AttributeInterface;
 use Owl\Component\Attribute\Model\AttributeSubjectInterface;
 use Owl\Component\Attribute\Model\AttributeValue;
 use Owl\Component\Attribute\Model\AttributeValueInterface;
+use PhpSpec\ObjectBehavior;
 
 final class AttributeValueSpec extends ObjectBehavior
 {

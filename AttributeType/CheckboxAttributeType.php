@@ -21,8 +21,6 @@ final class CheckboxAttributeType implements AttributeTypeInterface
     public const TYPE = 'checkbox';
 
     /**
-     * @return string
-     *
      * @psalm-return 'boolean'
      */
     public function getStorageType(): string
@@ -31,8 +29,6 @@ final class CheckboxAttributeType implements AttributeTypeInterface
     }
 
     /**
-     * @return string
-     *
      * @psalm-return 'checkbox'
      */
     public function getType(): string
@@ -43,7 +39,7 @@ final class CheckboxAttributeType implements AttributeTypeInterface
     public function validate(
         AttributeValueInterface $attributeValue,
         ExecutionContextInterface $context,
-        array $configuration
+        array $configuration,
     ): void {
     }
 }

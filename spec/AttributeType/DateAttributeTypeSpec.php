@@ -13,9 +13,9 @@ declare(strict_types=1);
 
 namespace spec\Owl\Component\Attribute\AttributeType;
 
-use PhpSpec\ObjectBehavior;
 use Owl\Component\Attribute\AttributeType\AttributeTypeInterface;
 use Owl\Component\Attribute\AttributeType\DateAttributeType;
+use PhpSpec\ObjectBehavior;
 
 final class DateAttributeTypeSpec extends ObjectBehavior
 {

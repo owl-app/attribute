@@ -13,12 +13,12 @@ declare(strict_types=1);
 
 namespace spec\Owl\Component\Attribute\AttributeType;
 
-use PhpSpec\ObjectBehavior;
-use Prophecy\Argument;
 use Owl\Component\Attribute\AttributeType\AttributeTypeInterface;
 use Owl\Component\Attribute\AttributeType\SelectAttributeType;
 use Owl\Component\Attribute\Model\AttributeInterface;
 use Owl\Component\Attribute\Model\AttributeValueInterface;
+use PhpSpec\ObjectBehavior;
+use Prophecy\Argument;
 use Symfony\Component\Validator\Constraints\NotBlank;
 use Symfony\Component\Validator\ConstraintViolationInterface;
 use Symfony\Component\Validator\ConstraintViolationListInterface;
@@ -55,7 +55,7 @@ final class SelectAttributeTypeSpec extends ObjectBehavior
         ConstraintViolationInterface $constraintViolation,
         ConstraintViolationListInterface $constraintViolationList,
         ExecutionContextInterface $context,
-        ValidatorInterface $validator
+        ValidatorInterface $validator,
     ): void {
         $attributeValue->getAttribute()->willReturn($attribute);
 

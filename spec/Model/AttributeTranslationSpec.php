@@ -13,9 +13,9 @@ declare(strict_types=1);
 
 namespace spec\Owl\Component\Attribute\Model;
 
-use PhpSpec\ObjectBehavior;
 use Owl\Component\Attribute\Model\AttributeTranslation;
 use Owl\Component\Attribute\Model\AttributeTranslationInterface;
+use PhpSpec\ObjectBehavior;
 
 final class AttributeTranslationSpec extends ObjectBehavior
 {

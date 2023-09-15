@@ -13,11 +13,11 @@ declare(strict_types=1);
 
 namespace spec\Owl\Component\Attribute\Factory;
 
-use PhpSpec\ObjectBehavior;
 use Owl\Component\Attribute\AttributeType\AttributeTypeInterface;
 use Owl\Component\Attribute\Factory\AttributeFactory;
 use Owl\Component\Attribute\Factory\AttributeFactoryInterface;
 use Owl\Component\Attribute\Model\Attribute;
+use PhpSpec\ObjectBehavior;
 use Sylius\Component\Registry\ServiceRegistryInterface;
 use Sylius\Component\Resource\Factory\FactoryInterface;
 
@@ -40,7 +40,7 @@ final class AttributeFactorySpec extends ObjectBehavior
 
     function it_creates_untyped_attribute(
         FactoryInterface $factory,
-        Attribute $untypedAttribute
+        Attribute $untypedAttribute,
     ): void {
         $factory->createNew()->willReturn($untypedAttribute);
 
@@ -51,7 +51,7 @@ final class AttributeFactorySpec extends ObjectBehavior
         Attribute $typedAttribute,
         AttributeTypeInterface $attributeType,
         FactoryInterface $factory,
-        ServiceRegistryInterface $attributeTypesRegistry
+        ServiceRegistryInterface $attributeTypesRegistry,
     ): void {
         $factory->createNew()->willReturn($typedAttribute);
 

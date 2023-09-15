@@ -13,11 +13,11 @@ declare(strict_types=1);
 
 namespace spec\Owl\Component\Attribute\Model;
 
-use PhpSpec\ObjectBehavior;
 use Owl\Component\Attribute\AttributeType\CheckboxAttributeType;
 use Owl\Component\Attribute\AttributeType\TextAttributeType;
 use Owl\Component\Attribute\Model\Attribute;
 use Owl\Component\Attribute\Model\AttributeInterface;
+use PhpSpec\ObjectBehavior;
 
 final class AttributeSpec extends ObjectBehavior
 {

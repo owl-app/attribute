@@ -23,8 +23,6 @@ final class TextareaAttributeType implements AttributeTypeInterface
     public const TYPE = 'textarea';
 
     /**
-     * @return string
-     *
      * @psalm-return 'text'
      */
     public function getStorageType(): string
@@ -33,8 +31,6 @@ final class TextareaAttributeType implements AttributeTypeInterface
     }
 
     /**
-     * @return string
-     *
      * @psalm-return 'textarea'
      */
     public function getType(): string
@@ -45,7 +41,7 @@ final class TextareaAttributeType implements AttributeTypeInterface
     public function validate(
         AttributeValueInterface $attributeValue,
         ExecutionContextInterface $context,
-        array $configuration
+        array $configuration,
     ): void {
         if (!isset($configuration['required'])) {
             return;
@@ -64,7 +60,7 @@ final class TextareaAttributeType implements AttributeTypeInterface
 
     private function getValidationErrors(
         ExecutionContextInterface $context,
-        ?string $value
+        ?string $value,
     ): ConstraintViolationListInterface {
         $validator = $context->getValidator();
 
@@ -72,7 +68,7 @@ final class TextareaAttributeType implements AttributeTypeInterface
             $value,
             [
                 new NotBlank([]),
-            ]
+            ],
         );
     }
 }

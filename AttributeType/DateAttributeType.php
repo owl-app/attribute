@@ -21,8 +21,6 @@ final class DateAttributeType implements AttributeTypeInterface
     public const TYPE = 'date';
 
     /**
-     * @return string
-     *
      * @psalm-return 'date'
      */
     public function getStorageType(): string
@@ -31,8 +29,6 @@ final class DateAttributeType implements AttributeTypeInterface
     }
 
     /**
-     * @return string
-     *
      * @psalm-return 'date'
      */
     public function getType(): string
@@ -43,7 +39,7 @@ final class DateAttributeType implements AttributeTypeInterface
     public function validate(
         AttributeValueInterface $attributeValue,
         ExecutionContextInterface $context,
-        array $configuration
+        array $configuration,
     ): void {
     }
 }

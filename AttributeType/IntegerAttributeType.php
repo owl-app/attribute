@@ -23,8 +23,6 @@ final class IntegerAttributeType implements AttributeTypeInterface
     public const TYPE = 'integer';
 
     /**
-     * @return string
-     *
      * @psalm-return 'integer'
      */
     public function getStorageType(): string
@@ -33,8 +31,6 @@ final class IntegerAttributeType implements AttributeTypeInterface
     }
 
     /**
-     * @return string
-     *
      * @psalm-return 'integer'
      */
     public function getType(): string
@@ -45,7 +41,7 @@ final class IntegerAttributeType implements AttributeTypeInterface
     public function validate(
         AttributeValueInterface $attributeValue,
         ExecutionContextInterface $context,
-        array $configuration
+        array $configuration,
     ): void {
         if (!isset($configuration['required'])) {
             return;

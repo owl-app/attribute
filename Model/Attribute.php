@@ -24,6 +24,9 @@ class Attribute implements AttributeInterface
     protected $id;
 
     /** @var string */
+    protected $name;
+
+    /** @var string */
     protected $code;
 
     /** @var string */
@@ -51,6 +54,19 @@ class Attribute implements AttributeInterface
     public function getId()
     {
         return $this->id;
+    }
+
+    /**
+     * @return string
+     */
+    public function getName(): ?string
+    {
+        return $this->name;
+    }
+
+    public function setName(?string $name): void
+    {
+        $this->name = $name;
     }
 
     /**

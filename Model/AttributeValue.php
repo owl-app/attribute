@@ -110,6 +110,13 @@ class AttributeValue implements AttributeValueInterface
         return $this->attribute->getCode();
     }
 
+    public function getName(): ?string
+    {
+        $this->assertAttributeIsSet();
+
+        return $this->attribute->getName();
+    }
+
     public function getType(): ?string
     {
         $this->assertAttributeIsSet();
